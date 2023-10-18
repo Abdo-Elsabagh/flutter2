@@ -6,22 +6,37 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black38,
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-        leading: const Icon(Icons.abc),
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.access_time_outlined,
-              size: 25,
-              color: Colors.amber,
-            )
-          ],
-        ),
+      // backgroundColor: Colors.black38,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.amber,
+      //leading: const Icon(Icons.abc),
+      // ),
+      body: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Image.network(
+            'https://cdn.motor1.com/images/mgl/g4lqPo/s3/lamborghini-price-lead.webp',
+            errorBuilder: (context, error, stackTrace) {
+              return const Icon(Icons.add_circle_outline_sharp);
+            },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Image.network(
+              'https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/articles/patch-note-v109/pj-f123-bel-w01-rus.jpg.adapt.1456w.jpg',
+              width: 260,
+              height: 200,
+              fit: BoxFit.fitWidth
+              //fit: BoxFit.cover
+              // fit: BoxFit.fill
+              ),
+          Image.network(
+            '',
+            errorBuilder: (context, error, stackTrace) {
+              return const Icon(Icons.add_circle_outline_sharp);
+            },
+          )
+        ]),
       ),
     );
   }
