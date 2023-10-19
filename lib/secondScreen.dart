@@ -32,11 +32,15 @@ class SecondScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Image.asset(
-                'assets/82.jpg',
-                height: 70,
-                width: 100,
-                fit: BoxFit.fitWidth,
+              Container(
+                height: 150,
+                width: 150,
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  shape: BoxShape.circle,
+                ),
+                child: const CircleAvatar(
+                    radius: 49, backgroundImage: AssetImage('assets/82.jpg')),
               ),
               const SizedBox(
                 height: 15,

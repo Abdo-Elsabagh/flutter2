@@ -67,10 +67,23 @@ class ThreeScreen extends StatelessWidget {
           width: 300,
           //color: Colors.white,
           decoration: BoxDecoration(
-              color: Colors.white, 
+              color: Colors.white,
               // border: Border.all(color: Colors.amber, width: 3),
               borderRadius: BorderRadius.circular(20)),
           child: const Text('my name'),
+        ),
+        const SizedBox(
+          height: 60,
+        ),
+        Container(
+          height: 200,
+          width: 150,
+          decoration: const BoxDecoration(
+            color: Colors.blue,
+            shape: BoxShape.circle,
+          ),
+          child: const CircleAvatar(
+              radius: 49, backgroundImage: AssetImage('assets/82.jpg')),
         )
       ])),
       //       floatingActionButton: FloatingActionButton(
