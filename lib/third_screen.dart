@@ -6,7 +6,7 @@ class ThreeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.cyanAccent,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.deepOrange,
@@ -68,15 +68,19 @@ class ThreeScreen extends StatelessWidget {
           //color: Colors.white,
           decoration: BoxDecoration(
               color: Colors.white,
-              // border: Border.all(color: Colors.amber, width: 3),
-              borderRadius: BorderRadius.circular(20)),
+              border: Border.all(color: Colors.amber, width: 3),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: const [
+                BoxShadow(color: Colors.black, blurRadius: 20)
+              ]),
+
           child: const Text('my name'),
         ),
         const SizedBox(
-          height: 60,
+          height: 10,
         ),
         Container(
-          height: 200,
+          height: 100,
           width: 150,
           decoration: const BoxDecoration(
             color: Colors.blue,
@@ -84,6 +88,29 @@ class ThreeScreen extends StatelessWidget {
           ),
           child: const CircleAvatar(
               radius: 49, backgroundImage: AssetImage('assets/82.jpg')),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Container(
+          alignment: Alignment.center,
+          height: 180,
+          width: 180,
+          decoration: BoxDecoration(
+              //color: Colors.black,
+              gradient: const LinearGradient(
+                  begin: Alignment.center,
+                  end: Alignment.topLeft,
+                  colors: [Colors.black, Colors.white]),
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.deepOrange, width: 4),
+              boxShadow: const [
+                BoxShadow(color: Colors.black, blurRadius: 13)
+              ]),
+          child: const Text(
+            'Flutter',
+            style: TextStyle(color: Colors.blue, fontSize: 33),
+          ),
         )
       ])),
       //       floatingActionButton: FloatingActionButton(
